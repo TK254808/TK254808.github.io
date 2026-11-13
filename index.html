@@ -1,81 +1,142 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TKのポートフォリオ</title>
+
   <style>
+    /* ページ全体 */
     body {
       background: #14141c;
       color: #e8e8f0;
       font-family: sans-serif;
-      max-width: 720px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
       line-height: 1.7;
     }
+
     h1 {
       color: #5ee0ff;
     }
+
+    h2 {
+      color: #5ee0ff;
+      border-bottom: 1px solid #343b4a;
+      padding-bottom: 8px;
+      margin-top: 40px;
+    }
+
+    /* 作品カードの並び */
+    .work-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    /* 作品カード */
+    .work-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: linear-gradient(135deg, #252b38, #1d1d29);
+      border: 1px solid #343b4a;
+      border-radius: 10px;
+
+      min-height: 140px;
+      padding: 20px;
+
+      color: #e8e8f0;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+
+      transition: 0.2s;
+    }
+
+    /* マウスを乗せたとき */
+    .work-card:hover {
+      border-color: #5ee0ff;
+      background: #252b38;
+      transform: translateY(-3px);
+    }
+
+    /* 2年生の作品は3列 */
+    .work-list.three-columns {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* スマホ対応 */
+    @media (max-width: 600px) {
+      body {
+        padding: 16px;
+      }
+
+      .work-list,
+      .work-list.three-columns {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
+
 <body>
+
+  <!-- 自己紹介 -->
   <h1>【TK】</h1>
-  <p>Unityで2Dや3Dのゲームを作り、Reactを使ってWebサイトを制作してきました。</p>
-  <p>特技：サッカー<br>学生の頃9年間やっていました</p>
+
+  <p>
+    Unityで2Dや3Dのゲームを作り、
+    Reactを使ってWebサイトを制作してきました。
+  </p>
+
+  <p>
+    特技：サッカー<br>
+    学生の頃9年間やっていました
+  </p>
+
   <p>趣味：モンスト、アニメ、YouTube</p>
 
+
+  <!-- 1年生の作品 -->
   <h2>1年生の作品</h2>
 
-  <h3>雨避けゲーム</h3>
-  <p>ジャンル：2Dアクション</p>
-  <p>ゲーム内容：横移動で雨を避け、ジャンプで水たまりを飛び越え、耐えぬくアクションゲーム<br>
-  制限時間は1分間、時間が経つにつれどんどん難しくなっていきます。</p>
-  <p>使った技術：Unity/C#</p>
-  <p>制作人数：1人</p>
-  <p>担当：すべて</p>
-  <p>補足：キャラクターやUIはAI生成</p>
-  <p>サイトリンク：準備中</p>
+  <div class="work-list">
 
-  <h3>SnowShot</h3>
-  <p>ジャンル：3Dアクション</p>
-  <p>ゲーム内容：次々と出現してくる敵に雪玉を生成して投げ、倒していくゲーム<br>
-  最終的にボスが出現し倒すとゲームクリア</p>
-  <p>使った技術：UnrealEngine/BluePrint</p>
-  <p>制作人数：1人</p>
-  <p>担当：すべて</p>
-  <p>補足：オブジェクトやUIはUnrealEngine標準の物を使用</p>
-  <p>サイトリンク：準備中</p>
+    <a class="work-card" href="works/ame.html">
+      <span>雨避けゲーム</span>
+    </a>
 
+    <a class="work-card" href="works/snowshot.html">
+      <span>SnowShot</span>
+    </a>
+
+  </div>
+
+
+  <!-- 2年生の作品 -->
   <h2>2年生の作品</h2>
 
-  <h3>改造戦記ブラスター</h3>
-  <p>ジャンル：2Dシューティングローグライク</p>
-  <p>ゲーム内容：1人用のゲームで、敵を倒しステージを進んでいくシンプルなシューティングゲームです。<br>
-  敵を倒すと稀にバフアイテムや武器をドロップします。5つまでのバフを自分の好きな組み合わせでステージを攻略します。</p>
-  <p>使った技術：Unity/C#</p>
-  <p>制作人数：3人（プログラマー、デザイナー、プランナー）</p>
-  <p>担当：プログラム全般</p>
-  <p>サイトリンク：準備中</p>
+  <div class="work-list three-columns">
 
-  <h3>めっちゃラクガキ</h3>
-  <p>ジャンル：3Dアクション</p>
-  <p>ゲーム内容：ステージ上に隠された「鍵」を3つ探し、ラクガキを用いて脱出を目指すゲームです。<br>
-  制限時間は5分で、ラクガキできる量にも制限があります。</p>
-  <p>使った技術：Unity/C#</p>
-  <p>制作人数：1人</p>
-  <p>担当：すべて</p>
-  <p>補足：オブジェクトはUnity標準のものを使い、仕組みづくりに集中しました。</p>
-  <p>サイトリンク：準備中</p>
+    <a class="work-card" href="works/blaster.html">
+      <span>改造戦記ブラスター</span>
+    </a>
 
-  <h3>日本史クイズ</h3>
-  <p>ジャンル：4択クイズ</p>
-  <p>ゲーム内容：ブラウザで遊べる日本史のクイズゲームです。<br>
-  複数のモードがあり、個人に合った学び方ができます。</p>
-  <p>使った技術：React/Vite/TypeScript</p>
-  <p>制作人数：3人（プログラマー、プランナー2人）</p>
-  <p>担当：プログラム全般</p>
-  <p>補足：2026年11月時点で制作中です。</p>
-  <p>サイトリンク：<a href="https://nihonshi-quiz-haiteku.vercel.app/">日本史クイズを開く</a></p>
+    <a class="work-card" href="works/rakugaki.html">
+      <span>めっちゃラクガキ</span>
+    </a>
+
+    <a class="work-card" href="works/nihonshi.html">
+      <span>日本史クイズ</span>
+    </a>
+
+  </div>
+
 </body>
 </html>

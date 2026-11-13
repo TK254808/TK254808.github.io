@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TKのポートフォリオ</title>
+
+  <style>
+    /* ページ全体 */
+    body {
+      background: #14141c;
+      color: #e8e8f0;
+      font-family: sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+      line-height: 1.7;
+    }
+
+    h1 {
+      color: #5ee0ff;
+    }
+
+    h2 {
+      color: #5ee0ff;
+      border-bottom: 1px solid #343b4a;
+      padding-bottom: 8px;
+      margin-top: 40px;
+    }
+
+    /* 作品カードの並び */
+    .work-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    /* 作品カード */
+    .work-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: linear-gradient(135deg, #252b38, #1d1d29);
+      border: 1px solid #343b4a;
+      border-radius: 10px;
+
+      min-height: 140px;
+      padding: 20px;
+
+      color: #e8e8f0;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+
+      transition: 0.2s;
+    }
+
+    /* マウスを乗せたとき */
+    .work-card:hover {
+      border-color: #5ee0ff;
+      background: #252b38;
+      transform: translateY(-3px);
+    }
+
+    /* 2年生の作品は3列 */
+    .work-list.three-columns {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* スマホ対応 */
+    @media (max-width: 600px) {
+      body {
+        padding: 16px;
+      }
+
+      .work-list,
+      .work-list.three-columns {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- 自己紹介 -->
+  <h1>【TK】</h1>
+
+  <p>
+    Unityで2Dや3Dのゲームを作り、
+    Reactを使ってWebサイトを制作してきました。
+  </p>
+
+  <p>
+    特技：サッカー<br>
+    学生の頃9年間やっていました
+  </p>
+
+  <p>趣味：モンスト、アニメ、YouTube</p>
+
+
+  <!-- 1年生の作品 -->
+  <h2>1年生の作品</h2>
+
+  <div class="work-list">
+
+    <a class="work-card" href="works/ame.html">
+      <span>雨避けゲーム</span>
+    </a>
+
+    <a class="work-card" href="works/snowshot.html">
+      <span>SnowShot</span>
+    </a>
+
+  </div>
+
+
+  <!-- 2年生の作品 -->
+  <h2>2年生の作品</h2>
+
+  <div class="work-list three-columns">
+
+    <a class="work-card" href="works/blaster.html">
+      <span>改造戦記ブラスター</span>
+    </a>
+
+    <a class="work-card" href="works/rakugaki.html">
+      <span>めっちゃラクガキ</span>
+    </a>
+
+    <a class="work-card" href="works/nihonshi.html">
+      <span>日本史クイズ</span>
+    </a>
+
+  </div>
+
+</body>
+</html>
