@@ -10,8 +10,10 @@
 
 <a href="../index.html">トップページに戻る</a>
 
-<div class="game-image">
-  <p>スクリーンショット準備中</p>
+<div class="game-images">
+  <img src="../images/ame-images/ame1.png" alt="スタート画面">
+  <img src="../images/ame-images/ame2.png" alt="水たまり画面">
+  <img src="../images/ame-images/ame3.png" alt="ジャンプ画面">
 </div>
 
 <section>
@@ -109,6 +111,23 @@ a:hover {
     padding: 16px;
   }
 }
+
+    .game-images {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.game-images img {
+  width: calc((100% - 32px) / 3);
+  max-width: 260px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
 </style>
 
 </html>

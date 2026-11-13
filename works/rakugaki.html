@@ -64,6 +64,23 @@
       body { padding: 16px; }
       section { padding: 16px; }
     }
+
+    .game-images {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.game-images img {
+  width: calc((100% - 32px) / 3);
+  max-width: 260px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
   </style>
 </head>
 
@@ -73,8 +90,10 @@
 
 <a href="../index.html">トップページに戻る</a>
 
-<div class="game-image">
-  <p>スクリーンショット準備中</p>
+<div class="game-images">
+  <img src="../images/rakugaki-images/rakugaki1.png" alt="ラクガキモード">
+  <img src="../images/rakugaki-images/rakugaki2.png" alt="描いた線を登る場面">
+  <img src="../images/rakugaki-images/rakugaki3.png" alt="カメラ・視点変更">
 </div>
 
 <section>

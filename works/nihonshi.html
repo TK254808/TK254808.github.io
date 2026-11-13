@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TKのポートフォリオ</title>
+  <title>日本史クイズ | TK</title>
 
   <style>
-    /* ページ全体 */
     body {
       background: #14141c;
       color: #e8e8f0;
@@ -18,125 +17,118 @@
       line-height: 1.7;
     }
 
-    h1 {
-      color: #5ee0ff;
+    h1, h2 { color: #5ee0ff; }
+
+    .game-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #222630;
+      border: 1px solid #5ee0ff;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    section {
+      background: #1d1d29;
+      border: 1px solid #343b4a;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 24px;
     }
 
     h2 {
-      color: #5ee0ff;
       border-bottom: 1px solid #343b4a;
       padding-bottom: 8px;
-      margin-top: 40px;
+      margin-bottom: 16px;
     }
 
-    /* 作品カードの並び */
-    .work-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    /* 作品カード */
-    .work-card {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      background: linear-gradient(135deg, #252b38, #1d1d29);
-      border: 1px solid #343b4a;
-      border-radius: 10px;
-
-      min-height: 140px;
-      padding: 20px;
-
-      color: #e8e8f0;
+    a {
+      display: inline-block;
+      color: #5ee0ff;
       text-decoration: none;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-
+      border: 1px solid #5ee0ff;
+      border-radius: 6px;
+      padding: 8px 16px;
       transition: 0.2s;
     }
 
-    /* マウスを乗せたとき */
-    .work-card:hover {
-      border-color: #5ee0ff;
-      background: #252b38;
-      transform: translateY(-3px);
+    a:hover {
+      background: #5ee0ff;
+      color: #14141c;
     }
 
-    /* 2年生の作品は3列 */
-    .work-list.three-columns {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* スマホ対応 */
     @media (max-width: 600px) {
-      body {
-        padding: 16px;
-      }
-
-      .work-list,
-      .work-list.three-columns {
-        grid-template-columns: 1fr;
-      }
+      body { padding: 16px; }
+      section { padding: 16px; }
     }
+
+.game-images {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.game-images img {
+  width: calc((100% - 32px) / 3);
+  max-width: 260px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.game-images {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
 
   </style>
 </head>
 
 <body>
 
-  <!-- 自己紹介 -->
-  <h1>【TK】</h1>
+<h1>日本史クイズ</h1>
 
+<a href="../index.html">トップページに戻る</a>
+
+<div class="game-images">
+    <img src="../images/nihonshi-quiz-images/nihonshi-quiz1.png" alt="ホーム画面">
+    <img src="../images/nihonshi-quiz-images/nihonshi-quiz2.png" alt="クイズ画面">
+    <img src="../images/nihonshi-quiz-images/nihonshi-quiz3.png" alt="正当、解説画面">
+
+<section>
+  <h2>ゲーム内容</h2>
   <p>
-    Unityで2Dや3Dのゲームを作り、
-    Reactを使ってWebサイトを制作してきました。
+    ブラウザで遊べる4択形式の日本史クイズゲームです。
   </p>
-
   <p>
-    特技：サッカー<br>
-    学生の頃9年間やっていました
+    複数のモードを搭載しており、
+    自分に合った学び方で日本史を楽しめます。
   </p>
+</section>
 
-  <p>趣味：モンスト、アニメ、YouTube</p>
+<section>
+  <h2>制作情報</h2>
+  <p>使用技術：React / Vite / TypeScript</p>
+  <p>制作人数：3人（プログラマー1人、プランナー2人）</p>
+  <p>担当：プログラム全般</p>
+  <p>補足：2026年11月時点で制作中です。</p>
+</section>
 
-
-  <!-- 1年生の作品 -->
-  <h2>1年生の作品</h2>
-
-  <div class="work-list">
-
-    <a class="work-card" href="works/ame.html">
-      <span>雨避けゲーム</span>
+<section>
+  <h2>ゲームリンク</h2>
+  <p>
+    <a href="https://nihonshi-quiz-haiteku.vercel.app/" target="_blank" rel="noopener noreferrer">
+      日本史クイズを開く
     </a>
-
-    <a class="work-card" href="works/snowshot.html">
-      <span>SnowShot</span>
-    </a>
-
-  </div>
-
-
-  <!-- 2年生の作品 -->
-  <h2>2年生の作品</h2>
-
-  <div class="work-list three-columns">
-
-    <a class="work-card" href="works/blaster.html">
-      <span>改造戦記ブラスター</span>
-    </a>
-
-    <a class="work-card" href="works/rakugaki.html">
-      <span>めっちゃラクガキ</span>
-    </a>
-
-    <a class="work-card" href="works/nihonshi.html">
-      <span>日本史クイズ</span>
-    </a>
-
-  </div>
+  </p>
+</section>
 
 </body>
 </html>
